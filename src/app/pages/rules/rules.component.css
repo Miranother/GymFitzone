@@ -1,0 +1,94 @@
+.titulo-reglas {
+    color: #ffffff;
+  }
+  
+  .icono-titulo {
+    color: #4a90e2; 
+    vertical-align: middle;
+  }
+  
+  .linea-azul {
+    width: 80px;
+    height: 4px;
+    background-color: #4a90e2;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+  
+  .norma-card {
+    background-color: #162f4b; 
+    color: #ffffff; 
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .norma-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+  }
+  
+  .icono-card {
+    font-size: 1.8rem;
+    color: #4a90e2;
+  }
+  
+  .divisor {
+    background-color: #4a90e2;
+    height: 2px;
+    border: none;
+  }
+  
+  .mat-list-item, 
+  .norma-item span {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  .norma-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .icono-punto {
+    color: #6c63ff; 
+    font-size: 1.2rem;
+  }
+  
+
+  .codigo-card {
+    background-color: #162f4b; 
+    color: #ffffff;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .codigo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3); 
+  }
+  
+  .icono-card {
+    font-size: 1.8rem;
+    color: #4a90e2;
+  }
+  
+  .divisor {
+    background-color: #4a90e2;
+    height: 2px;
+    border: none;
+  }
+  
+  .icono-punto {
+    color: #6c63ff;
+    font-size: 1.5rem;
+  }
+  
+  .norma-item,
+  .norma-item span,
+  .norma-item p {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  

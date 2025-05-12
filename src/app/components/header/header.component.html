@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img [src]="logo" style="height: 50px; margin-right: 10px;" alt="Logo FitZone" class="logo" />
+
+      <span>FitZone</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+        <li class="nav-item">
+          <a class="nav-link me-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon class="me-1">home</mat-icon> Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/clases" routerLinkActive="active">
+            <mat-icon class="me-1">calendar_month</mat-icon> Clases
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/videos" routerLinkActive="active">
+            <mat-icon class="me-1">video_library</mat-icon> Videos
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/inscripcion" routerLinkActive="active">
+           <mat-icon class="me-1">person_add</mat-icon> Inscripción
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contacto" routerLinkActive="active">
+            <mat-icon class="me-1">mail</mat-icon> Contacto
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reglas" routerLinkActive="active">
+            <mat-icon class="me-1">gavel</mat-icon> Reglas
+          </a>
+        </li>
+
+        @if (authService.isLoggedIn()) {
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-shield-alt me-1"></i> Administración
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/admin/form-template">
+                  <i class="fas fa-clipboard-list me-2"></i> Ver inscripciones
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/admin/contacto">
+                  <i class="fas fa-comments me-2"></i> Ver contactos
+                </a>
+              </li> 
+            </ul>
+          </li>
+        }
+      </ul>
+
+      @if (authService.isLoggedIn()) {
+        <div class="d-flex align-items-center">
+          <span class="navbar-text me-3">
+            <i class="fas fa-user-circle me-1"></i> Bienvenido, {{ authService.getAdminName() }}
+          </span>
+          <button class="btn btn-outline-light btn-sm" (click)="logout()">
+            <i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión
+          </button>
+        </div>
+      } @else {
+        <a class="btn btn-outline-light btn-sm" routerLink="/login">
+          <i class="fas fa-sign-in-alt me-1"></i> Iniciar sesión
+        </a>
+      }
+    </div>
+  </div>
+</nav>
